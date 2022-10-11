@@ -169,5 +169,10 @@ export default {
   .controls-visible-group {
     top: -5%;
   }
+
+  .icon {
+    height: 25px;
+    width: 20px;
+  }
 }
 </style>
