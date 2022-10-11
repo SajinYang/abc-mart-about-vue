@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@import '../scss/reset.scss';
+@import '../scss/color.scss';
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,700;1,400&display=swap');
+@import url('../scss/sweetalert.scss');
+
+html {
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto Mono', 'Noto Sans TC', sans-serif;
+}
+
+img {
+  overflow: hidden;
+  object-fit: cover;
+}
+
+input {
+  text-align: center;
+}
+
+#section-container {
+  min-height: calc(100vh - 145px);
+  margin-top: 90px;
+}
+
+
+.scrollbar {
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #C1C1C1;
+  }
+}
