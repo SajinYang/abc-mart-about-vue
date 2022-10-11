@@ -1,27 +1,24 @@
 <template>
   <nav class="navbar">
-    <a href="/index" class="logo"><div>ABC團購形象網</div> </a>
-    <input type="checkbox" id="toggler" />
+    <a href="/" class="logo"><div>ABC團購形象網</div> </a>
+    <input type="checkbox" id="toggler" v-model="checked" />
     <label for="toggler"
       ><img src="../assets/icons/menu-icon.svg" alt=""
     /></label>
     <div class="menu">
       <ul class="list">
         <li @click.stop.prevent="commetId('home')">
-          <router-link to="" class="item item-last"
-            >
+          <router-link to="" class="item item-last">
             <div class="item-title">home</div>
           </router-link>
         </li>
         <li @click.stop.prevent="commetId('about')">
-          <router-link to="" class="item item-last"
-            >
+          <router-link to="" class="item item-last">
             <div class="item-title">About</div>
           </router-link>
         </li>
         <li @click.stop.prevent="commetId('branch')">
-          <router-link to="" class="item item-last"
-            >
+          <router-link to="" class="item item-last">
             <div class="item-title">Branch</div>
           </router-link>
         </li>
@@ -38,13 +35,19 @@
 
 <script>
 export default {
+  data() {
+    return {
+      checked: false,
+    };
+  },
   methods: {
     commetId(id) {
       this.$emit("scroll-into-commet", {
-        commetId: id
-      })
-    }
-  }
+        commetId: id,
+      });
+      this.checked = false;
+    },
+  },
 };
 </script>
 
